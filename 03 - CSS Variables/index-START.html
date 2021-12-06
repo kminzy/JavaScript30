@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Scoped CSS Variables and JS</title>
-    <script src="variables.js" defer></script>
+    <script src="variables_after.js" defer></script>
   </head>
   <body>
     <h2>Update CSS Variables with <span class="hl">JS</span></h2>
@@ -40,13 +40,13 @@
     <style>
       :root {
         /* color, space, blur의 기본값 */
-        --color-base: #ffc600;
-        --space-base: 10px;
-        --blur-base: 10px;
+        --base: #ffc600;
+        --spacing: 10px;
+        --blur: 10px;
       }
       /*
-      misc styles, nothing to do with CSS variables
-    */
+        misc styles, nothing to do with CSS variables
+      */
 
       body {
         text-align: center;
@@ -66,12 +66,14 @@
       }
 
       img {
-        transform: translate(var(--space-base));
-        filter: blur(var(--blur-base));
+        padding: var(--spacing);
+        background: var(--base);
+        transform: translate(var(--spacing));
+        filter: blur(var(--blur));
       }
 
       .hl {
-        color: var(--color-base);
+        color: var(--base);
       }
     </style>
 
