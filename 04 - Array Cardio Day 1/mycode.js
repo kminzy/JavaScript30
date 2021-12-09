@@ -58,6 +58,11 @@ const people = [
   "Biondo, Frank",
 ];
 
+const sortByPassed = inventors.sort((a, b) => {
+  return a.passed > b.passed ? -1 : 1;
+});
+console.table(sortByPassed);
+
 // Array.prototype.filter()
 // 1. Filter the list of inventors for those who were born in the 1500's
 const result1 = inventors.filter(
