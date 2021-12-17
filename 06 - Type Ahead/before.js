@@ -17,7 +17,8 @@ function displayData(items) {
     population: item.population,
   }));
 
-  if (search.value.includes(`${items}`)) {
+
+  if (search.value.includes(`${mapItem.city}`) || search.value.includes(`${mapItem.state}`)) {
     container.innerHTML = `<li>${mapItem.city}</li>`;
   }
 }
